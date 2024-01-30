@@ -1,0 +1,17 @@
+
+@use 'colour' as c;
+//* will get rid of namespace
+
+html{
+    font-size: 100%;
+   // browser default size for scalability
+
+}
+
+body{
+   // increase the font-size to 18px, which will give baseline grid size of 27px
+    font-size: 1.125rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: c.$off-black;
+    //variables need to be brought in with @use and use namespace
+}
