@@ -1,5 +1,6 @@
 @use 'colour' as *;
 @use 'breakpoints' as *;
+@use 'mixin' as *;
 
 
 header, section{
@@ -10,21 +11,34 @@ article{
 }
 
 .grid-container{
-    max-width: 1500px;
-    padding: 1rem;
-    margin: 0 auto;
+   @include container;
     display: grid;
     gap: 1rem;
+    align-items: start;
 }
 @media screen and (min-width: $small) {
     .grid-container{
         grid-template-columns: repeat(12, 1fr);
 
     .recent-posts{
-        grid-column: 1 / span 8;
+        grid-column: 1 / span 6;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        h2, article:first-of-type{
+            grid-column: 1/ -1;
+        }
+       
     }
     .popular-posts{
-        grid-column: 9 / span 9;
+        h2 {
+            margin-bottom: 1rem;
+
+        }
+        grid-column: 7 / span 6;
+        article{
+            display: block;
+        }
     }
     footer{
         grid-column: 1/ -1;
@@ -32,12 +46,15 @@ article{
     
 }
 @media screen and (min-width: $med){
-    .recent-posts{
+    .grid-container{
+         .recent-posts{
         grid-column: 1 / span 8;
     }
     .popular-posts{
-        grid-column: 9 / span 9;
+        grid-column: 9 / span 4;
     }
+    }
+   
 }
     
 }
@@ -45,6 +62,8 @@ article{
     article{
         border: 1px solid $grey;
         border-radius: 5px;
+        display: flex;
+        gap: 1rem;
         div{
             padding: 1.5rem 1.5rem 0 1.5rem;
         }
