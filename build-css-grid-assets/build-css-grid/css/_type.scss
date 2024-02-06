@@ -3,3 +3,7 @@ p{
     letter-spacing: 0.12rem;
     word-spacing: 0.16rem;
 }
+
+h1{
+    font-size: clamp(2.69rem, 2.3824rem + 1.5382vw, 4.209rem);
+}

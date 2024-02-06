@@ -9,7 +9,11 @@ header, section{
 article{
     margin-bottom: 32px;
 }
-
+.recent-posts{
+    img:first-of-type{
+        aspect-ratio: 625/417 auto;
+    }
+}
 .grid-container{
    @include container;
     display: grid;

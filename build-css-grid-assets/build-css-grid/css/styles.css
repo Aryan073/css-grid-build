@@ -124,7 +124,7 @@ header .show {
   max-height: 200px;
 }
 
-@media screen and (min-width: 540px) {
+@media screen and (min-width: 630px) {
   header button {
     display: none;
   }
@@ -136,6 +136,9 @@ header .show {
     display: flex;
     gap: 1rem;
   }
+  header nav a {
+    padding: 0.5rem;
+  }
 }
 header, section {
   margin-bottom: 50px;
@@ -143,6 +146,10 @@ header, section {
 
 article {
   margin-bottom: 32px;
+}
+
+.recent-posts img:first-of-type {
+  aspect-ratio: 625/417 auto;
 }
 
 .grid-container {
@@ -185,7 +192,7 @@ article {
     grid-column: 1/-1;
   }
 }
-@media screen and (min-width: 950px) and (min-width: 1350px) {
+@media screen and (min-width: 950px) and (min-width: 1300px) {
   .grid-container .recent-posts {
     grid-column: 1/span 8;
   }
@@ -212,6 +219,10 @@ p {
   word-spacing: 0.16rem;
 }
 
+h1 {
+  font-size: clamp(2.69rem, 2.3824rem + 1.5382vw, 4.209rem);
+}
+
 footer {
   display: flex;
   flex-wrap: wrap;
@@ -219,4 +230,8 @@ footer {
 }
 footer div {
   flex: 1;
+}
+footer div a {
+  padding: 0.5rem;
+  display: block;
 }/*# sourceMappingURL=styles.css.map */
